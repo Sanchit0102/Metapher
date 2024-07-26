@@ -13,7 +13,6 @@ import asyncio
 
 # Use a lock to ensure only one clone operation runs at a time
 clone_lock = asyncio.Lock()
-#ALL FILES UPLOADED - CREDITS 🌟 - @Sunrises_24
 
 SCOPES = ['https://www.googleapis.com/auth/drive.file']
 
@@ -33,7 +32,6 @@ def authenticate_google_drive():
             pickle.dump(creds, token)
     return creds
 
-#ALL FILES UPLOADED - CREDITS 🌟 - @Sunrises_24
 # Authenticate and create the Drive service
 creds = authenticate_google_drive()
 drive_service = build('drive', 'v3', credentials=creds)
@@ -54,7 +52,6 @@ async def upload_to_google_drive(file_path, file_name, sts):
 
 
 
-#ALL FILES UPLOADED - CREDITS 🌟 - @Sunrises_24
 #clone
 
 def extract_id_from_url(url):
@@ -92,7 +89,6 @@ async def copy_file(file_id, new_folder_id):
         print(f"An error occurred: {error}")
         return None
 
-#ALL FILES UPLOADED - CREDITS 🌟 - @Sunrises_24
 
 def get_files_in_folder(folder_id):
     try:
