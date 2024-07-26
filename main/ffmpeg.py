@@ -1,11 +1,9 @@
-#ALL FILES UPLOADED - CREDITS 🌟 - @Sunrises_24
 import subprocess
 import zipfile
 import asyncio
 import ffmpeg
 import os
 
-#ALL FILES UPLOADED - CREDITS 🌟 - @Sunrises_24
 def remove_all_tags(input_path, output_path):
     command = [
         'ffmpeg',
@@ -21,7 +19,6 @@ def remove_all_tags(input_path, output_path):
     if process.returncode != 0:
         raise Exception(f"FFmpeg error: {stderr.decode('utf-8')}")
 
-#ALL FILES UPLOADED - CREDITS 🌟 - @Sunrises_24
 def change_video_metadata(input_path, video_title, audio_title, subtitle_title, output_path):
     command = [
         'ffmpeg',
@@ -44,7 +41,6 @@ def change_video_metadata(input_path, video_title, audio_title, subtitle_title, 
     if process.returncode != 0:
         raise Exception(f"FFmpeg error: {stderr.decode('utf-8')}")
 
-#ALL FILES UPLOADED - CREDITS 🌟 - @Sunrises_24
 def generate_sample_video(input_path, duration, output_path):
     # Get the total duration of the input video using ffprobe
     probe_command = [
@@ -103,7 +99,6 @@ def add_photo_attachment(input_path, attachment_path, output_path):
     if process.returncode != 0:
         raise Exception(f"FFmpeg error: {stderr.decode('utf-8')}")
 
-#ALL FILES UPLOADED - CREDITS 🌟 - @Sunrises_24
 # Function to merge videos 
 async def merge_videos(input_file, output_file):
     file_generator_command = [
@@ -135,7 +130,6 @@ async def merge_videos(input_file, output_file):
         raise RuntimeError(f"Error merging videos: {e}")
 
 #Extract the audio 
-#ALL FILES UPLOADED - CREDITS 🌟 - @Sunrises_24
 def extract_audio_stream(input_path, output_path, stream_index):
     command = [
         'ffmpeg',
@@ -151,7 +145,6 @@ def extract_audio_stream(input_path, output_path, stream_index):
         raise Exception(f"FFmpeg error: {stderr.decode('utf-8')}")
 
 #Extract the subtitles 
-#ALL FILES UPLOADED - CREDITS 🌟 - @Sunrises_24
 def extract_subtitle_stream(input_path, output_path, stream_index):
     command = [
         'ffmpeg',
@@ -168,7 +161,6 @@ def extract_subtitle_stream(input_path, output_path, stream_index):
 
 
 #Extract the video 
-#ALL FILES UPLOADED - CREDITS 🌟 - @Sunrises_24
 def extract_video_stream(input_path, output_path, stream_index, codec_name):
     temp_output = f"{output_path}.{codec_name}"  # Temporary output file
     command = [
@@ -213,7 +205,6 @@ def extract_video_stream(input_path, output_path, stream_index, codec_name):
     os.remove(temp_output)  # Remove temporary file
     return mkv_output if process_mkv.returncode == 0 else mp4_output
 
-#ALL FILES UPLOADED - CREDITS 🌟 - @Sunrises_24
 # Function to unzip files
 def unzip_file(file_path, extract_path):
     extracted_files = []
@@ -227,7 +218,6 @@ def unzip_file(file_path, extract_path):
         print(f"Error unzipping file: {e}")
     return extracted_files
   
-#ALL FILES UPLOADED - CREDITS 🌟 - @Sunrises_24        
 # Recursive function to extract audio
 def extract_audios_from_file(input_path):
     video_streams_data = ffmpeg.probe(input_path)
@@ -242,7 +232,6 @@ def extract_audios_from_file(input_path):
 
     return extracted_files
 
-#ALL FILES UPLOADED - CREDITS 🌟 - @Sunrises_24        
 # Recursive function to extract subtitles 
 def extract_subtitles_from_file(input_path):
     video_streams_data = ffmpeg.probe(input_path)
@@ -256,7 +245,6 @@ def extract_subtitles_from_file(input_path):
 
     return extracted_files
 
-#ALL FILES UPLOADED - CREDITS 🌟 - @Sunrises_24        
 # Recursive function to extract  Video
 def extract_video_from_file(input_path):
     video_streams_data = ffmpeg.probe(input_path)
