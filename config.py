@@ -13,7 +13,7 @@ ADMIN = int(os.environ.get("ADMIN", '1562935405'))
 FSUB_UPDATES = os.environ.get("FSUB_CHANNEL", "BOT_TESTING_OFFICIAL")
 FSUB_GROUP = os.environ.get("FSUB_GROUP", "UNF_OFFICIAL")
 DATABASE_URI = os.environ.get("DATABASE_URI", "mongodb+srv://trumbot:trumbot@cluster0.cfkaeno.mongodb.net/?retryWrites=true&w=majority")    #         "mongodb+srv://UPLOADXPRO24BOT:UPLOADXPRO24BOT@cluster0.hjfk60f.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
-DATABASE_NAME = os.environ.get("DATABASE_NAME", "Cluster0")
+DATABASE_NAME = os.environ.get("DATABASE_NAME", "sastawzml")
 CAPTION = os.environ.get("CAPTION", "")
 group = environ.get('GROUP', '-1002165324303')
 GROUP = int(group) if group and id_pattern.search(group) else None
