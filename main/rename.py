@@ -1,5 +1,3 @@
-#TG : @Sunrises_24
-#ALL FILES UPLOADED - CREDITS 🌟 - @Sunrises_24
 import subprocess
 import os
 import time
@@ -56,7 +54,6 @@ EXTRACT_ENABLED = True
 
 
 
-#ALL FILES UPLOADED - CREDITS 🌟 - @Sunrises_24
 # Command handler to start the interaction (only in admin)
 @Client.on_message(filters.command("bsettings") & filters.chat(ADMIN))
 async def bot_settings_command(_, msg):
@@ -77,7 +74,7 @@ async def display_bot_settings_inline(msg):
     
     keyboard = InlineKeyboardMarkup(
         inline_keyboard=[
-            [InlineKeyboardButton("💠", callback_data="sunrises24_bot_updates")],            
+            [InlineKeyboardButton("💠", callback_data="updates")],            
             [InlineKeyboardButton(f"{rename_status} Change Rename 📝", callback_data="toggle_rename")],
             [InlineKeyboardButton(f"{removealltags_status} Remove All Tags 📛", callback_data="toggle_removealltags")],
             [InlineKeyboardButton(f"{metadata_status} Change Metadata ☄️", callback_data="toggle_metadata")],            
@@ -86,14 +83,13 @@ async def display_bot_settings_inline(msg):
             [InlineKeyboardButton(f"{photo_attach_status} Attach Photo 🖼️", callback_data="toggle_photo_attach")],                        
             [InlineKeyboardButton(f"{mirror_status} Mirror 💽", callback_data="toggle_mirror")],            
             [InlineKeyboardButton("Close ❌", callback_data="del")],
-            [InlineKeyboardButton("💠", callback_data="sunrises24_bot_updates")]
+            [InlineKeyboardButton("💠", callback_data="updates")]
         ]
     )
 
     await msg.reply_text("Use inline buttons to manage your settings:", reply_markup=keyboard)
 
 
-#ALL FILES UPLOADED - CREDITS 🌟 - @Sunrises_24
 @Client.on_callback_query(filters.regex("del"))
 async def closed(bot, msg):
     try:
@@ -154,10 +150,10 @@ async def toggle_merge_video_callback(_, callback_query):
     MERGE_ENABLED = not MERGE_ENABLED
     await update_settings_message(callback_query.message)
     
-# Callback query handler for the "sunrises24_bot_updates" button
-@Client.on_callback_query(filters.regex("^sunrises24_bot_updates$"))
-async def sunrises24_bot_updates_callback(_, callback_query):
-    await callback_query.answer("MADE BY @SUNRISES24BOTUPDATES ❤️", show_alert=True)    
+# Callback query handler for the "updates" button
+@Client.on_callback_query(filters.regex("^updates$"))
+async def updates_callback(_, callback_query):
+    await callback_query.answer("MADE BY @THE_DS_OFFICIAL ❤️", show_alert=True)    
 
 
 async def update_settings_message(message):
@@ -173,7 +169,7 @@ async def update_settings_message(message):
       
     keyboard = InlineKeyboardMarkup(
         inline_keyboard=[
-            [InlineKeyboardButton("💠", callback_data="sunrises24_bot_updates")],            
+            [InlineKeyboardButton("💠", callback_data="updates")],            
             [InlineKeyboardButton(f"{rename_status} Change Rename 📝", callback_data="toggle_rename")],
             [InlineKeyboardButton(f"{removealltags_status} Remove All Tags 📛", callback_data="toggle_removealltags")],
             [InlineKeyboardButton(f"{metadata_status} Change Metadata ☄️", callback_data="toggle_metadata")],            
@@ -182,7 +178,7 @@ async def update_settings_message(message):
             [InlineKeyboardButton(f"{photo_attach_status} Attach Photo 🖼️", callback_data="toggle_photo_attach")],                        
             [InlineKeyboardButton(f"{mirror_status} Mirror 💽", callback_data="toggle_mirror")],            
             [InlineKeyboardButton("Close ❌", callback_data="del")],
-            [InlineKeyboardButton("💠", callback_data="sunrises24_bot_updates")]
+            [InlineKeyboardButton("💠", callback_data="updates")]
         ]
     )
 
@@ -233,7 +229,7 @@ async def display_user_settings(client, msg, edit=False):
     current_screenshots = await db.get_screenshots_count(user_id)
 
     keyboard = InlineKeyboardMarkup([
-        [InlineKeyboardButton("💠", callback_data="sunrises24_bot_updates")],
+        [InlineKeyboardButton("💠", callback_data="updates")],
         [InlineKeyboardButton("Sample Video Settings 🎞️", callback_data="sample_video_option")],
         [InlineKeyboardButton("Screenshots Settings 📸", callback_data="screenshots_option")],
         [InlineKeyboardButton("Thumbnail Settings 📄", callback_data="thumbnail_settings")],
@@ -242,7 +238,7 @@ async def display_user_settings(client, msg, edit=False):
          InlineKeyboardButton("View Photo ✨", callback_data="preview_photo")],
         [InlineKeyboardButton("View Gofile API Key 🔗", callback_data="preview_gofilekey")],
         [InlineKeyboardButton("View Google Drive Folder ID 📂", callback_data="preview_gdrive")],
-        [InlineKeyboardButton("💠", callback_data="sunrises24_bot_updates")],
+        [InlineKeyboardButton("💠", callback_data="updates")],
         [InlineKeyboardButton("Close ❌", callback_data="del")]
     ])
     
@@ -2525,11 +2521,7 @@ async def broadcast(bot, msg: Message):
 @Client.on_message(filters.command("about"))
 async def about_command(bot, msg):
     about_text = """
-<b>✯ Mʏ Nᴀᴍᴇ : <a href=https://t.me/MetaMorpher24Bot>𝐌𝐞𝐭𝐚𝐌𝐨𝐫𝐩𝐡𝐞𝐫 🌟</a></b>
-<b>✯ Dᴇᴠᴇʟᴏᴘᴇʀ 🧑🏻‍💻 : <a href=https://t.me/Sunrises_24>𝐒𝐔𝐍𝐑𝐈𝐒𝐄𝐒™ ⚡</a></b>
-<b>✯ Uᴘᴅᴀᴛᴇs 📢 : <a href=https://t.me/Sunrises24BotUpdates>𝐔𝐏𝐃𝐀𝐓𝐄𝐒 📢</a></b>
-<b>✯ Sᴜᴘᴘᴏʀᴛ ✨ : <a href=https://t.me/Sunrises24BotUpdates>𝐒𝐔𝐏𝐏𝐎𝐑𝐓 ✨</a></b>
-<b>✯ Bᴜɪʟᴅ Sᴛᴀᴛᴜs 📊 : ᴠ2.5 [Sᴛᴀʙʟᴇ]</b>
+<b> Nothing To Tell You Bro 😥 </b>
     """
     await msg.reply_text(about_text)
 
@@ -2537,7 +2529,7 @@ async def about_command(bot, msg):
 @Client.on_message(filters.command("help"))
 async def help_command(bot, msg):
     help_text = """
-    <b>Hᴇʟʟᴏ Mᴀᴡᴀ ❤️
+    <b>Hᴇʟʟᴏ ❤️
 Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Mʏ Cᴏᴍᴍᴀɴᴅs.
 
 🦋 ʜᴏᴡ ᴛᴏ ᴜꜱᴇ
@@ -2584,7 +2576,7 @@ Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Mʏ Cᴏᴍᴍᴀɴᴅs.
 
  💭• Tʜɪs Bᴏᴛ Is Fᴏʟʟᴏᴡs ᴛʜᴇ 𝟸GB Bᴇʟᴏᴡ Fɪʟᴇs Tᴏ Tᴇʟᴇɢʀᴀᴍ.\n• 𝟸GB Aʙᴏᴠᴇ Fɪʟᴇs Tᴏ Gᴏᴏɢʟᴇ Dʀɪᴠᴇ.
  
-🔱 𝐌𝐚𝐢𝐧𝐭𝐚𝐢𝐧𝐞𝐝 𝐁𝐲 : <a href='https://t.me/Sunrises_24'>𝐒𝐔𝐍𝐑𝐈𝐒𝐄𝐒™</a></b>
+🔱 𝐌𝐚𝐢𝐧𝐭𝐚𝐢𝐧𝐞𝐝 𝐁𝐲 : <a href='https://t.me/THE_DS_OFFCIAL'>ՏIᒪᗴᑎT ᘜᕼOՏT ⚡️</a></b>
     
    """
     await msg.reply_text(help_text)
