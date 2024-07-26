@@ -17,7 +17,6 @@ DATABASE_NAME = os.environ.get("DATABASE_NAME", "sastawzml")
 CAPTION = os.environ.get("CAPTION", "")
 group = environ.get('GROUP', '-1002165324303')
 GROUP = int(group) if group and id_pattern.search(group) else None
-#ALL FILES UPLOADED - CREDITS 🌟 - @Sunrises_24
 SUNRISES_PIC= "https://graph.org/file/75dfa4b1e385a7c2d044d.jpg"  # Replace with your Telegraph link
 AUTH_USERS = int(os.environ.get("AUTH_USERS", '1562935405'))
 WEBHOOK = bool(os.environ.get("WEBHOOK", True))
