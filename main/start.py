@@ -1,4 +1,3 @@
-#ALL FILES UPLOADED - CREDITS 🌟 - @Sunrises_24
 import asyncio, time
 from pyrogram import Client, filters, enums
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
