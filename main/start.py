@@ -10,9 +10,9 @@ from pymongo.errors import PyMongoError
 
 
 START_TEXT = """
-Hᴇʟʟᴏ Mᴀᴡа❤️! I ᴀᴍ ᴛʜᴇ Aᴅᴠᴀɴᴄᴇᴅ Rᴇɴᴀᴍᴇ 𝟸𝟺 Bᴏᴛ [MᴇᴛᴀMᴏʀᴘʜᴇʀ]⚡
+<b>Hᴇʟʟᴏ ❤️! I ᴀᴍ ᴛʜᴇ Aᴅᴠᴀɴᴄᴇᴅ Bᴏᴛ ⚡</b>
 
-Mᴀᴅᴇ ʙʏ <b><a href=https://t.me/Sunrises24botupdates>SUNRISES ™💥</a></b> ᴀɴᴅ <b><a href=https://t.me/Sunrises_24>Sᴜɴʀɪꜱᴇꜱ Hᴀʀꜱʜᴀ 𝟸𝟺❤️</a></b>.
+<b>Mᴀᴅᴇ ʙʏ <a href=https://t.me/THE_DS_OFFICIAL>ՏIᒪᗴᑎT ᘜᕼOՏT ⚡️</a></b>.
 
 Fᴇᴀᴛᴜʀᴇs:
 
@@ -32,11 +32,7 @@ Fᴇᴀᴛᴜʀᴇs:
 - Uᴘʟᴏᴀᴅ Lᴀʀɢᴇ Fɪʟᴇs (𝟺GB+) ᴛᴏ Gᴏᴏɢʟᴇ Dʀɪᴠᴇ
 
 Exᴘʟᴏʀᴇ sɪᴍᴘʟɪᴄɪᴛʏ! 💥
-
-#SUNRISES24BOTS #SIMPLERENAME24BOT
 """
-
-#ALL FILES UPLOADED - CREDITS 🌟 - @Sunrises_24
 
 
 joined_channel_1 = {}
@@ -111,11 +107,11 @@ async def start(bot, msg: Message):
             photo=SUNRISES_PIC,
             caption=start_text,
             reply_markup=InlineKeyboardMarkup([
-                [InlineKeyboardButton("Developer ❤️", url="https://t.me/Sunrises_24"),
-                 InlineKeyboardButton("Updates 📢", url="https://t.me/Sunrises24botupdates")],
+                [InlineKeyboardButton("Developer ❤️", url="https://t.me/THE_DS_OFFICIAL"),
+                 InlineKeyboardButton("Updates 📢", url="https://t.me/THE_SILENT_TEAMS")],
                 [InlineKeyboardButton("Help 🌟", callback_data="help"),
                  InlineKeyboardButton("About 🧑🏻‍💻", callback_data="about")],
-                [InlineKeyboardButton("Support ❤️‍🔥", url="https://t.me/Sunrises24botSupport")]
+                [InlineKeyboardButton("Support ❤️‍🔥", url="https://t.me/DND_ON_HAI")]
             ]),
             reply_to_message_id=getattr(msg, "message_id", None)
         )
@@ -165,32 +161,28 @@ async def handle_private_message(bot, msg: Message):
         return
         
 
-#ALL FILES UPLOADED - CREDITS 🌟 - @Sunrises_24
 #FUNCTION CALLBACK HELP
 @Client.on_callback_query(filters.regex("help"))
 async def help(bot, msg):
     txt =  "Fᴏʀ ᴀssɪsᴛᴀɴᴄᴇ, ᴄʟɪᴄᴋ ᴛʜᴇ 'Hᴇʟᴘ' ʙᴜᴛᴛᴏɴ ᴏʀ ᴛʏᴘᴇ ᴛʜᴇ `/help` ᴄᴏᴍᴍᴀɴᴅ ғᴏʀ ᴅᴇᴛᴀɪʟᴇᴅ ɪɴsᴛʀᴜᴄᴛɪᴏɴs ᴀɴᴅ sᴜᴘᴘᴏʀᴛ.\n\n"
-    txt += "Jᴏɪɴ : @Sunrises24BotUpdates"
+    txt += "Jᴏɪɴ : @Silent_BOts"
     button= [[        
         InlineKeyboardButton("Cʟᴏꜱᴇ ❌", callback_data="del")   
     ]] 
     await msg.message.edit(text=txt, reply_markup=InlineKeyboardMarkup(button), disable_web_page_preview = True)
  
-#ALL FILES UPLOADED - CREDITS 🌟 - @Sunrises_24
 #FUNCTION CALL BACK ABOUT
 @Client.on_callback_query(filters.regex("about"))
 async def about(bot, msg):
     me=await bot.get_me()
-    Dᴇᴠᴇʟᴏᴘᴇʀ ="<a href=https://t.me/Sunrises_24>SUNRISES™🧑🏻‍💻</a>"     
-    txt="<b>Uᴘᴅᴀᴛᴇs 📢: <a href=https://t.me/Sunrises24botupdates>SUNRISES™</a></b>"
-    txt="<b>Sᴜᴘᴘᴏʀᴛ ✨: <a href=https://t.me/Sunrises24botSupport>SUNRISES⚡™</a></b>"
+    Dᴇᴠᴇʟᴏᴘᴇʀ ="<a href=https://t.me/THE_DS_OFFICIAL>ՏIᒪᗴᑎT ᘜᕼOՏT ⚡️</a>"     
+    txt="<b>Uᴘᴅᴀᴛᴇs 📢: <a href=https://t.me/Silent_Bots>SILENT TEAM</a></b>"
     txt="<b>✯ Bᴜɪʟᴅ Sᴛᴀᴛᴜs 📊 : ᴠ2.4 [Sᴛᴀʙʟᴇ]</b>" 
     button= [[        
         InlineKeyboardButton("Cʟᴏꜱᴇ ❌", callback_data="del")       
     ]]  
     await msg.message.edit(text=txt, reply_markup=InlineKeyboardMarkup(button), disable_web_page_preview = True, parse_mode=enums.ParseMode.HTML)
 
-#ALL FILES UPLOADED - CREDITS 🌟 - @Sunrises_24
 @Client.on_callback_query(filters.regex("del"))
 async def closed(bot, msg):
     try:
