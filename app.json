@@ -1,5 +1,5 @@
 { 
-    "name": "MetaMorpher", 
+    "name": "Metapher", 
     "description": "ADVANCE RENAME BOT WITH THUMBNAIL,CAPTION & HIGH SPEED ⚡️",
     "logo":"https://graph.org/file/bd91761f6e938e2e6d23a.jpg",
     "repository": "https://github.com/Aluval/MetaMorpher",   
@@ -18,7 +18,7 @@
             "required": true 
         },
         "DATABASE_URI": {
-            "description": "mongoDB URI. Get this value from https://www.mongodb.com. For more help watch this video - https://youtu.be/dsuTn4qV2GA",
+            "description": "mongoDB URI. Get this value from https://www.mongodb.com.",
             "value": "",
             "required": true
         },
